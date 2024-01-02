@@ -2,4 +2,4 @@ server:
   port: ${PORT_APP}
 
 apiAnime:
-  urlBase: "https://api.jikan.moe/v4/anime"
+  urlBase: ${URL_API_ANIME}
