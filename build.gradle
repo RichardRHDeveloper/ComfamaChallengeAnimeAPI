@@ -41,4 +41,12 @@ tasks.named('test') {
 
 jacocoTestReport {
 	dependsOn test
+	afterEvaluate {
+		classDirectories.setFrom(files(classDirectories.files.collect {
+			fileTree(dir: it, exclude: [
+			        '**/dto/**',
+					'**/enums/**'
+			])
+		}))
+	}
 }

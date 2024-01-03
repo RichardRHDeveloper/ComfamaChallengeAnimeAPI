@@ -17,7 +17,7 @@ public class ExceptionsHandler {
         return ResponseEntity.internalServerError().body(
                 ResponseDto.builder()
                         .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                        .message(ex.getMessage())
+                        .message("MESSAGE ERROR: " + ex.getMessage())
                         .build()
         );
     }

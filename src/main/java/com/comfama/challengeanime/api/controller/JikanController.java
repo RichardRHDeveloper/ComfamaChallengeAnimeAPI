@@ -18,7 +18,7 @@ public class JikanController {
     IJikanService iJikanService;
 
     @GetMapping("/getAll")
-    public ResponseEntity<ResponseDto<ResponseJikanDto>> getListAnime(
+    public ResponseEntity<ResponseDto<ResponseJikanDto>> getListAnimeByTitle(
             @RequestParam Integer page,
             @RequestParam Integer limit,
             @RequestParam String search
