@@ -8,4 +8,4 @@ docker rm $(docker ps -aq --filter name=$name_image)
 cd ../
 
 docker build -t $name_image .
-docker run -e PORT_APP=$PORT_APP -e CONTEXT_PATH_APP=$CONTEXT_PATH_APP -d -p 9000:$PORT_APP --name $name_image $name_image
+docker run -e PORT_APP=$PORT_APP -e URL_API_ANIME=$URL_API_ANIME -d -p 9000:$PORT_APP --name $name_image $name_image

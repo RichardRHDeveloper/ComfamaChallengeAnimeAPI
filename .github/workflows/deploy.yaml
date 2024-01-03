@@ -26,6 +26,7 @@ jobs:
       - name: Build with Gradle
         run: |
           export PORT_APP=${{ vars.PORT_APP }}
+          export URL_API_ANIME=${{ vars.URL_API_ANIME }}
           ./gradlew build
 
       - name: Copy Project to EC2
@@ -46,4 +47,5 @@ jobs:
           script: |
             cd ../reto-comfama/scripts/
             export PORT_APP=${{ vars.PORT_APP }}
+            export URL_API_ANIME=${{ vars.URL_API_ANIME }}
             bash docker_process.sh
